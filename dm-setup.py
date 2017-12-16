@@ -32,11 +32,11 @@ print HASH_OFFSET_BYTES
 
 hash_alg = 'sha256'
 
-fmt1 = "1 %s %s %d %d %d %d %s %s %s" 
-table = fmt1 % (DATA_DEV, hash_dev, data_block_size, hash_block_size, num_blocks, hash_offset, hash_alg, ROOT_DIGEST, SALT)
+fmttab= "1 %s %s %d %d %d %d %s %s %s" 
+table = fmttab % (DATA_DEV, hash_dev, data_block_size, hash_block_size, num_blocks, hash_offset, hash_alg, ROOT_DIGEST, SALT)
 
-fmt2 = "veritysetup --debug --hash-offset %d --data-blocks %d format %s %s"
-veritycmd = fmt2 % (HASH_OFFSET_BYTES, num_blocks, DATA_DEV, hash_dev)
+fmtcmd = "veritysetup --debug --hash-offset %d --data-blocks %d format %s %s"
+veritycmd = fmtcmd % (HASH_OFFSET_BYTES, num_blocks, DATA_DEV, hash_dev)
 
 print "DM verity table: \n" + table
 
