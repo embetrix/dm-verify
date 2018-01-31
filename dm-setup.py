@@ -1,4 +1,13 @@
 #!/usr/bin/python
+#
+#
+# inspired from:
+# https://github.com/nelenkov/verity/blob/master/gentable.py
+#
+# nelenkov/verity is licensed under the Apache License 2.0
+#
+#
+
 import struct
 import sys
 import os
